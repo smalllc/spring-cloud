@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://localhost:8080  # http://user:password123@localhost:8080  两种方式curl style
+      username: user   #属性的优先级要比url的优先级要高
+      password: password123
+  application:
+    name: foobar

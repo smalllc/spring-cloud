@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: foobar
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: spring-cloud-basic-config-service-eureka
+      username: user
+      password: password123
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}

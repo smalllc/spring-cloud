@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: spring-cloud-basic-consumer-movie-ribbon-without-eureka
+server:
+  port: 8012
+eureka:
+  client:
+    region:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+spring-cloud-basic-provider-user:
+  ribbon:
+    listOfServers:  localhost:7900 #不使用eureka的微服务
+

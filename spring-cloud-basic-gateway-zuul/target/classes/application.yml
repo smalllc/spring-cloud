@@ -1,0 +1,20 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password123
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    ip-address: ture
+spring:
+  application:
+    name: spring-cloud-basic-gateway-zuul
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie,Authorization # 设置传递过程中是否将某些header禁止传递
+  ignored-headers:

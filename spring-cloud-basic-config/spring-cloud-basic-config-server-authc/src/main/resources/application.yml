@@ -1,0 +1,22 @@
+#用户名密码
+server:
+  port: 8080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/smalllc/spring-cloud-learning
+          username:
+          password:
+  rabbitmq:
+    host: 106.13.49.209
+    port: 5672
+    username: smallcc
+    password: 112211
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password123

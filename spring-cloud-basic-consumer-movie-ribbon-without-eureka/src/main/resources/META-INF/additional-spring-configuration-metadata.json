@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "spring-cloud-basic-provider-user.ribbon.NFLoadBalancerRuleClassName",
+      "type": "java.lang.String",
+      "description": "Description for spring-cloud-basic-provider-user.ribbon.NFLoadBalancerRuleClassName."
+    },
+    {
+      "name": "eureka.client.healthcheck.enabled",
+      "type": "java.lang.String",
+      "description": "Description for eureka.client.healthcheck.enabled."
+    }
+  ] }

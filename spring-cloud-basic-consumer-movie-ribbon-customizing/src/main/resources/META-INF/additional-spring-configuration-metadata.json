@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring-cloud-basic-provider-user.ribbon.NFLoadBalancerRuleClassName",
+      "type": "java.lang.String",
+      "description": "Description for spring-cloud-basic-provider-user.ribbon.NFLoadBalancerRuleClassName."
+  }
+] }

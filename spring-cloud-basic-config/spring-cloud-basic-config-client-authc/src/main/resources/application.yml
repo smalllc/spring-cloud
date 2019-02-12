@@ -1,0 +1,6 @@
+server:
+  port: 8083
+profile: test #测试冲突
+spring:
+  application:
+    name: foobar

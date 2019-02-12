@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.smallcc.cloud</groupId>
+	<artifactId>spring-cloud-basic-spring-cloud</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>spring-cloud-basic-provider-user</module>
+		<module>spring-cloud-basic-consumer-movie</module>
+		<module>spring-cloud-basic-consumer-movie-ribbon</module>
+		<module>spring-cloud-basic-discovery-eureka</module>
+		<module>spring-cloud-basic-discovery-eureka-ha</module>
+		<module>spring-cloud-basic-consumer-movie-ribbon-without-eureka</module>
+		<module>spring-cloud-basic-consumer-movie-feign</module>
+		<module>spring-cloud-basic-consumer-movie-feign-with-hystrix</module>
+		<module>spring-cloud-basic-consumer-movie-feign-with-hystrix-factory</module>
+		<module>spring-cloud-basic-consumer-movie-feign-customizing</module>
+		<module>spring-cloud-basic-consumer-movie-feign-customizing-without-hystrix</module>
+		<module>spring-cloud-basic-consumer-movie-ribbon-customizing</module>
+		<module>spring-cloud-basic-consumer-movie-ribbon-with-hystrix</module>
+		<module>spring-cloud-basic-consumer-movie-ribbon-with-hystrix-two</module>
+		<module>spring-cloud-basic-consumer-movie-ribbon-with-hystrix-three</module>
+		<module>spring-cloud-basic-consumer-movie-ribbon-with-hystrix-propagation</module>
+		<module>spring-cloud-basic-hystrix-dashboard</module>
+		<module>spring-cloud-basic-hystrix-turbine</module>
+		<module>spring-cloud-basic-hystrix-turbine-two</module>
+		<module>spring-cloud-basic-hystrix-turbine-three</module>
+		<module>spring-cloud-basic-gateway-zuul</module>
+		<module>spring-cloud-basic-gateway-zuul-filter</module>
+		<module>spring-cloud-basic-gateway-zuul-fallback</module>
+		<module>spring-cloud-basic-gateway-zuul-reg-exp</module>
+		<module>spring-cloud-basic-file-upload</module>
+		<module>spring-cloud-basic-sidecar</module>
+		<module>spring-cloud-basic-config</module>
+	</modules>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.1.RELEASE</version>
+	</parent>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Camden.SR2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

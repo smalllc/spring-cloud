@@ -1,0 +1,22 @@
+package com.smallcc.cloud;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+/**
+  * @description
+  * @author 晓风过境
+  * @date 2019/1/23 15:11
+  * @param
+  * @return com.smallcc.cloud
+  * @title com.smallcc.cloud
+  * @project_name ConfigClientApplication.java
+  */
+@SpringBootApplication
+@EnableDiscoveryClient
+public class ConfigClientEurekaApplication {
+  public static void main(String[] args) {
+    SpringApplication.run(ConfigClientEurekaApplication.class, args);
+  }
+}

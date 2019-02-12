@@ -1,0 +1,12 @@
+server:
+  port: 8081
+# profile: test #测试冲突
+spring:
+  application:
+    name: foobar
+    index: ${random.long}
+  rabbitmq:
+    host: 106.13.49.209
+    port: 5672
+    username: smallcc
+    password: 112211

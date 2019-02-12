@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-cloud-basic-consumer-movie-ribbon-with-hystrix-three
+server:
+  port: 8015
+  context-path: /ribbon
+user: 
+  userServicePath: http://localhost:7900/simple/
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    home-page-url-path: /ribbon
+    metadata-map:
+      cluster: test
+      management.port: 8001
+management:
+  port: 8001

@@ -1,0 +1,16 @@
+#clone on start
+server:
+  port: 8080
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/smalllc/spring-cloud-learning  #公用的 找pattern找不到就回退
+          repos:
+            simple: https://github.com/smalllc/
+            special:
+              pattern: special*/dev*,*special*/dev*
+              uri:  https://github.com/smalllc/special
+              clone-on-start: false #局部拉代码 局部不开始把代码全部拉下来 默认是false  优先级高
+          clone-on-start: true #全局拉代码 启动把所有的代码全部拉下来false

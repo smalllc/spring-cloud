@@ -1,0 +1,28 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password123
+server:
+  port: 8040
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password123@localhost:8761/eureka
+  instance:
+    ip-address: ture
+spring:
+  application:
+    name: spring-cloud-basic-gateway-zuul
+zuul:
+  routes:
+    user:
+        path: /user-url/**
+        service-id: spring-cloud-basic-provider-user
+ribbon:
+  eureka:
+    enable: false
+spring-cloud-basic-provider-user:  #这个是注册到eureka上面的serverId
+  ribbon:
+    lastOfServers: http://192.168.1.12:7902,http://192.168.1.12:7901
